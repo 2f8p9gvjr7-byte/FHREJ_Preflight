@@ -275,7 +275,7 @@ loadAll();calcAll();
 <script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/FHREJ-Prevol/sw.js")
+    navigator.serviceWorker.register("/FHREJ_Preflight/sw.js")
       .then(reg => {
         reg.addEventListener("updatefound", () => {
           const newSW = reg.installing;

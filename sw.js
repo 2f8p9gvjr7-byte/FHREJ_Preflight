@@ -1,10 +1,10 @@
 const CACHE = 'fhrej-v1';
 const ASSETS = [
-  '/FHREJ-Prevol/',
-  '/FHREJ-Prevol/index.html',
-  '/FHREJ-Prevol/manifest.json',
-  '/FHREJ-Prevol/icon-192.png',
-  '/FHREJ-Prevol/icon-512.png'
+  '/FHREJ_Preflight/',
+  '/FHREJ_Preflight/index.html',
+  '/FHREJ_Preflight/manifest.json',
+  '/FHREJ_Preflight/icon-192.png',
+  '/FHREJ_Preflight/icon-512.png'
 ];
 
 self.addEventListener('install', e => {
@@ -32,7 +32,7 @@ self.addEventListener('fetch', e => {
         const clone = resp.clone();
         caches.open(CACHE).then(c => c.put(e.request, clone));
         return resp;
-      }).catch(() => caches.match('/FHREJ-Prevol/index.html'));
+      }).catch(() => caches.match('/FHREJ_Preflight/index.html'));
     })
   );
 });
